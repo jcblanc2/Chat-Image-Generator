@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { OpenAIApi, Configuration } from "openai";
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-generation',
@@ -16,7 +17,7 @@ export class GenerationComponent  implements OnInit{
   data: any[] = []
 
   configuration = new Configuration({
-    apiKey: "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",
+    apiKey: environment.openAIToken
   });
 
   openai = new OpenAIApi(this.configuration);
