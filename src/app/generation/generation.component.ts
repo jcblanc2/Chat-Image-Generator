@@ -17,7 +17,7 @@ export class GenerationComponent  implements OnInit{
   data: any[] = []
 
   configuration = new Configuration({
-    apiKey: environment.openAIToken
+    apiKey: ""
   });
 
   openai = new OpenAIApi(this.configuration);

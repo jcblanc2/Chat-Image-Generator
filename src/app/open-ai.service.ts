@@ -6,22 +6,23 @@ import { environment } from 'src/environments/environment.development';
 @Injectable({
   providedIn: 'root'
 })
+
 export class OpenAiService {
 
   constructor() { }
 
   readonly configuration = new Configuration({
-    apiKey: environment.openAIToken
+    apiKey: ""
   });
 
   readonly openai = new OpenAIApi(this.configuration);
 
-  async getDataFromOpenAPI(text: string) {
+  async getDataFromOpenAPI(text: string): Promise<string> {
     const completion = await this.openai.createCompletion({
-      model: "text-davinci-002",
+      model: "text-davinci-003",
       prompt: text,
     });
-    console.log(completion.data.choices[0].text);
+    return String(completion.data.choices[0].text);
   }
 
 
