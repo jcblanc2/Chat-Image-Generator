@@ -1,0 +1,56 @@
+.title{
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1{
+  color: white;
+}
+
+input[type="text"]{
+  max-height: 200px;
+  height: 32px;
+  width: 380px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+input[type="button"]{
+  max-height: 200px;
+  height: 40px;
+  width: 90px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: white;
+  color: #33334d;
+  margin-top: 20px;
+}
+
+input[type="button"]:hover{
+  border: 2px solid white;
+  background-color: #33334d;
+  color: white;
+}
+
+form{
+  position: relative;
+  text-align: center;
+}
+
+.parent {
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.child {
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+
+img{
+  border: 1px solid white;
+  border-radius: 15px;
+  height: 400px;
+}

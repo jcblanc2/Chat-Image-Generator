@@ -1,0 +1,19 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+<div class="title">
+  <h1>Image Generator</h1>
+</div>
+
+  <form #des="ngForm" (ngSubmit)="callOpenAI(des.value)" >
+    <input type="text" name="description" placeholder="Describe an image" ngModel> <br>
+    <input type="button" value="Generate" (click)="callOpenAI(des.value)" (submit)="callOpenAI(des.value)">
+
+  </form>
+
+
+  <div class='parent'>
+    <div class='child' *ngFor="let img of data">
+      <img [src]="img?.url">
+    </div>
+  </div>
+
